@@ -23,7 +23,7 @@ class User{
 
                 $stmt = $this->conn->prepare($query);
                 $stmt->execute();
- // quando o código é executado fazendo a consulta só retorna um registro
+ // quando o código é executado fazendo a consulta só retorna um registro/ testar em casa o mesmo select no mysql
                 return $stmt;
     }
 }
