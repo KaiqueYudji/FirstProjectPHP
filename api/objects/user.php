@@ -20,11 +20,12 @@ class User{
         $stmt = array();
         $query = "SELECT *
             FROM
-                " . $this->table_name ;
+                " . $this->table_name." where ds_senha = 'celio@123' ";
 
                 $stmt = $this->conn->prepare($query);
-                $stmt->execute();
-                print_r($stmt);
+                print_r($stmt->execute());
+                // quando o código é executado fazendo a consulta só retorna um registro
+                
 
                 return $stmt;
     }
