@@ -17,12 +17,14 @@ class User{
     }
 
     public function read(){
+        $stmt = array();
         $query = "SELECT *
             FROM
-                " . $this->table_name;
+                " . $this->table_name ;
 
                 $stmt = $this->conn->prepare($query);
                 $stmt->execute();
+                print_r($stmt);
 
                 return $stmt;
     }

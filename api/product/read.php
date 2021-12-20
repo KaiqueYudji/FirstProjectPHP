@@ -29,7 +29,6 @@
             );
 
             array_push($user_arr["records"],$user_item);
-            echo"oieeeee";
      }else{
         http_response_code(404);
   
@@ -38,7 +37,6 @@
             array("message" => "No products found.")
         );
      }
-
-     http_response_code(300);
+     http_response_code(200);
   
      echo json_encode($user_arr);
