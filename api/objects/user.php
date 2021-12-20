@@ -17,16 +17,13 @@ class User{
     }
 
     public function read(){
-        $stmt = array();
         $query = "SELECT *
             FROM
-                " . $this->table_name." where ds_senha = 'celio@123' ";
+                " . $this->table_name;
 
                 $stmt = $this->conn->prepare($query);
-                print_r($stmt->execute());
-                // quando o código é executado fazendo a consulta só retorna um registro
-                
-
+                $stmt->execute();
+ // quando o código é executado fazendo a consulta só retorna um registro
                 return $stmt;
     }
 }
